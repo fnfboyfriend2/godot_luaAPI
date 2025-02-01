@@ -24,7 +24,7 @@ on:
       - "project/demo/*"
 
 env:
-  GODOT_VERSION: 4.2.1
+  GODOT_VERSION: 4.4
 
 jobs:
   static-checks:
@@ -61,7 +61,7 @@ jobs:
     uses: ./.github/workflows/android-build.yml
     with:
       fullbuild: ${{ github.event_name == 'workflow_dispatch' }}
-      godot_version: 4.2.1
+      godot_version: 4.4
   
   android-package:
     name: 🤖 Android Package
